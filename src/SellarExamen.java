@@ -19,6 +19,10 @@ public class SellarExamen {
 	 * @param args[1] clavePrivadaESellado
 	 */
 	public static void main(String args[]) throws Exception{
+		if (args.length != 2) {
+			mensajeAyuda();
+			System.exit(1);
+		}
 		Security.addProvider(new BouncyCastleProvider());
 		
 		//1. CARGAMOS PAQUETE DE ALUMNO
